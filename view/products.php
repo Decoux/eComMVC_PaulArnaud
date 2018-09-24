@@ -1,16 +1,19 @@
-<?php  $req = $pdo->query('SELECT * FROM articles');
+<?php
+
+$req = $pdo->query('SELECT * FROM articles');
       $data = $req->fetchAll();
 
 ?>
 
+
 <div class="container text-center">
 
-    <h1><?php echo $data[$_GET['index']]['name'] ?></h1>
+    <h1> <?php echo $data[$_GET['index']]['name'] ?> </h1>
 
     <img src="<?php echo $data[$_GET['index']]['picture'] ?>" alt="Photo du produit">
 
     <p>
-        <strong>Prix</strong><br /><?php echo $data[$_GET['index']]['price'] ?> Euros
+        <strong>Prix</strong><br /> <?php echo $data[$_GET['index']]['price'] ?> Euros
     </p>
 
     <p>

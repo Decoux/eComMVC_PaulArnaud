@@ -1,5 +1,7 @@
 
-<?php  $req = $pdo->query('SELECT * FROM articles');
+<?php
+
+$req = $pdo->query('SELECT * FROM articles');
       $data = $req->fetchAll();
 
 ?>
@@ -12,7 +14,8 @@
 
 
       <?php
-      foreach($data as $key => $val){?>
+      foreach($data as $key => $val){
+        ?>
 
           <div class=" col-sm-12 col-md-3 col-lg-3 product">
             <a href="products.php?index=<?php echo $key ?>">
